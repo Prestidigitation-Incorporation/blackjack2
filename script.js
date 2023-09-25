@@ -4,20 +4,22 @@ let secondCard = 9
 let sum = firstCard + secondCard
 let hasBlackjack = false
 let isAlive = true
-let message = ""
+let responseMessage = ""
+let gameMessage = document.getElementById("message-element")
+console.log(gameMessage)
+
 
 function startGame() {
     if (sum < 21) {
-        message = "Do you want another card?"
+        responseMessage = "Do you want another card?"
     } else if (sum === 21) {
-        message = "Blackjack!"
+        responseMessage = "Blackjack!"
         hasBlackjack = true
     } else if (sum > 21) {
-        message = "You lose. Sorry, chump."
+        responseMessage = "You lose. Sorry, chump."
         isAlive = false
     }
-
-    console.log(isAlive)
+    gameMessage.textContent = responseMessage
 }
 
 
