@@ -15,6 +15,9 @@ let theTotal = document.getElementById("total-element")
 let theCards = document.getElementById("cards-element")
 
 function startGame() {
+    playGame()
+}
+function playGame() {
     //Show the cards on the page
     theCards.textContent = "Cards: " + firstCard + " " + secondCard
     //Display theTotal on the page
@@ -33,6 +36,9 @@ function startGame() {
 
 function newCard() {
     console.log("Drawing a new card from the deck.")
+    let card = 2
+    sum += card
+    playGame()
 }
 
 
