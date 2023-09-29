@@ -1,6 +1,7 @@
 //Properties
 let firstCard = 6
 let secondCard = 9
+let cards = [firstCard, secondCard]
 let sum = firstCard + secondCard
 let hasBlackjack = false
 let isAlive = true
@@ -19,7 +20,7 @@ function startGame() {
 }
 function playGame() {
     //Show the cards on the page
-    theCards.textContent = "Cards: " + firstCard + " " + secondCard
+    theCards.textContent = "Cards: " + cards[0] + " " + cards[1]
     //Display theTotal on the page
     theTotal.textContent = "Sum: " + sum
     if (sum < 21) {
@@ -35,10 +36,15 @@ function playGame() {
 }
 
 function newCard() {
-    console.log("Drawing a new card from the deck.")
     let card = 2
     sum += card
+    cards.push(card)
+    console.log(cards)
     playGame()
 }
+
+// Where should we start counting?
+// Where's the finish line?
+// What's the step size we should use?
 
 
