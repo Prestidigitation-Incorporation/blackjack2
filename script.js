@@ -20,7 +20,13 @@ function startGame() {
 }
 function playGame() {
     //Show the cards on the page
-    theCards.textContent = "Cards: " + cards[0] + " " + cards[1]
+    theCards.textContent = "Cards: "
+
+    // Make a for-loop to display all the cards
+    for (let i = 0; i < cards.length; i++) {
+        theCards.textContent += cards[i] + " "
+    }
+
     //Display theTotal on the page
     theTotal.textContent = "Sum: " + sum
     if (sum < 21) {
