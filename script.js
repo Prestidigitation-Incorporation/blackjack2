@@ -1,10 +1,10 @@
 //Properties
-let firstCard = 6
-let secondCard = 9
-let cards = [firstCard, secondCard]
-let sum = firstCard + secondCard
+let firstCard = getRandomCard()
+let secondCard = getRandomCard()
+let cards = []
+let sum = 0
 let hasBlackjack = false
-let isAlive = true
+let isAlive = false
 let responseMessage = ""
 let gameMessage = document.getElementById("message-element")
 console.log(gameMessage)
@@ -15,7 +15,10 @@ let theTotal = document.getElementById("total-element")
 // Store the cards in a <p> variable.
 let theCards = document.getElementById("cards-element")
 
+console.log(cards)
+
 function startGame() {
+    isAlive = true
     playGame()
 }
 function playGame() {
@@ -42,15 +45,22 @@ function playGame() {
 }
 
 function newCard() {
-    let card = 2
+    let card = getRandomCard()
     sum += card
     cards.push(card)
     console.log(cards)
     playGame()
 }
 
-// Where should we start counting?
-// Where's the finish line?
-// What's the step size we should use?
+function getRandomCard() {
+    let randomNumber = Math.floor(Math.random() * 13) + 1 // This gives us a number from 1 - 13
+    if (randomNumber > 10) {
+        return 10
+    } else if (randomNumber === 1) {
+        return 11
+    } else {
+        return randomNumber
+    }
+}
 
 

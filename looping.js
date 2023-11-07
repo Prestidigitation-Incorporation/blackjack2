@@ -1,11 +1,8 @@
-let messages = [
-    "Hey",
-    "How are you?",
-    "I need donut",
-    "Make me a sandwich",
-    "Where's the candy, creeper?"
-]
+// let randomNumber = Math.random() * 6
+// console.log(randomNumber)
+//
+// let flooredNumber = Math.floor(3.45533453)
+// console.log(flooredNumber)
 
-for (let i = 0; i < messages.length; i++) {
-    console.log(messages[i])
-}
+let randomNumber = Math.floor(Math.random() * 6)
+console.log(randomNumber)
