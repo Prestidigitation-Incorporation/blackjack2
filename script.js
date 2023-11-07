@@ -7,15 +7,8 @@ let hasBlackjack = false
 let isAlive = false
 let responseMessage = ""
 let gameMessage = document.getElementById("message-element")
-console.log(gameMessage)
-
-// I'll store the total-element <p> in a new variable called theTotal.
 let theTotal = document.getElementById("total-element")
-
-// Store the cards in a <p> variable.
 let theCards = document.getElementById("cards-element")
-
-console.log(cards)
 
 function startGame() {
     isAlive = true
