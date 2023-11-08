@@ -9,6 +9,14 @@ let responseMessage = ""
 let gameMessage = document.getElementById("message-element")
 let theTotal = document.getElementById("total-element")
 let theCards = document.getElementById("cards-element")
+let player = {
+    name: "Abe Lincoln",
+    chips: 200
+}
+// let playerName = "Abe Lincoln"
+// let playerChips = 200
+let playerElement = document.getElementById('player-element')
+playerElement.textContent = player.name + ": $" + player.chips
 
 function startGame() {
     isAlive = true
