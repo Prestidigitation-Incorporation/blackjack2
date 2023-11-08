@@ -11,7 +11,8 @@ let theTotal = document.getElementById("total-element")
 let theCards = document.getElementById("cards-element")
 let player = {
     name: "Abe Lincoln",
-    chips: 200
+    chips: 200,
+    lunchOrder: "pb&j"
 }
 // let playerName = "Abe Lincoln"
 // let playerChips = 200
